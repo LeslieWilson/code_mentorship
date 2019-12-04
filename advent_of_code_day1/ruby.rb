@@ -17,9 +17,21 @@
 
 # 4. want something that adds them all together
 
+
 sum = 0
 File.foreach("input.txt") { |line|
-  mass = ((line.to_i)/3)-2
-  sum +=mass
+  fuel = ((line.to_i)/3)-2
+  sum += fuel
+  while fuel > 6
+  fuel = ((fuel)/3)-2
+  sum +=fuel
+
+end
+
 }
-  puts sum
+
+puts sum
+
+
+
+# while the answer is divisible by 3, do the math on the mass and add itt o the sum
