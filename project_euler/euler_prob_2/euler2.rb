@@ -11,9 +11,8 @@ def fibonacci(number)
     second = array[1]
     third = first + second
     fourth =  third + second
-
-end
-return array
+  end
+  return array
 end
 
 
