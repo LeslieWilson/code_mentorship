@@ -12,14 +12,14 @@ def fibonacci(number)
     array1.push(b)
     a, b = b, a+b
   end
-  array1.each do |i|
-    if i.even?
-    array2.push(i)
+
+  array.each do |i|
+    first = array[0]
+    second = array[1]
+    third = first + second
+    fourth =  third + second
   end
-  end
-  array2.each do |i|
-  sum += i
-  end
-  print sum
+  return array
+
 end
 print fibonacci(4000000)
