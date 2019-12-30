@@ -6,13 +6,13 @@
 // 4. return last number
 //
 
-var nums = [3,5,5,2,4]
+var nums = [3,5,5,5,5,2,4]
 
 function getSecondLargest(nums) {
     nums.sort(function(a, b){return a-b});
 firstLargest = nums.pop()
 let secondLargest = nums.pop()
-  if (secondLargest == firstLargest){
+  while (secondLargest == firstLargest){
   secondLargest = nums.pop()
 
   }
