@@ -1,3 +1,11 @@
 .blah{
     border:2px solid black;
 }
+
+.green{
+  background-color: green;
+}
+
+.red{
+  background-color:red;
+}

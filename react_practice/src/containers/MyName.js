@@ -1,6 +1,7 @@
 import React from "react"
 import Tile1 from '../components/Tile1.js'
 import ImageComponent from '../components/ImageComponent.js'
+import ButtonComponent from '../components/ButtonComponent.js'
 
 
 const MyName = (props) =>{
@@ -21,12 +22,17 @@ const MyName = (props) =>{
     )
   })
 
+
+
+
   let image = [
     {image:"https://i.postimg.cc/28ntcKB0/Screen-Shot-2020-01-03-at-3-26-54-PM.png",
     label:"pic 1ljkhlfkjdshflksajdfh"},
     {image:"https://i.postimg.cc/28ntcKB0/Screen-Shot-2020-01-03-at-3-26-54-PM.png",
    label: "pic2alskdjfhlksadjfhlakjdfh"}
   ]
+
+
 
   let imagepic = image.map(pic =>{
     return(
@@ -40,8 +46,12 @@ const MyName = (props) =>{
   return(
     <div>
     <h1>Hi Im Leslie</h1>
+    <ButtonComponent
+    button = "hello!"
+    />
     {information}
     {imagepic}
+
     </div>
   )
 
