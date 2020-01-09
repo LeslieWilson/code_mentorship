@@ -1,6 +1,7 @@
 import React from "react"
 import Tile1 from '../components/Tile1.js'
 import ImageComponent from '../components/ImageComponent.js'
+import ButtonComponent from '../components/ButtonComponent.js'
 
 
 const MyName = (props) =>{
@@ -37,11 +38,33 @@ const MyName = (props) =>{
     )
   })
 
+
+  let buttons = [
+    {button:"hello"},
+    {button: "button"}
+  ]
+
+  let buttontile = buttons.map(button=>{
+    return(
+      <ButtonComponent
+      button = {button.button}
+      />
+    )
+  })
+
   return(
     <div>
     <h1>Hi Im Leslie</h1>
+    {buttontile}
+      <button>"hello there im button"</button>
+      <ButtonComponent
+      button = "hello there"
+      />
     {information}
     {imagepic}
+
+
+
     </div>
   )
 
