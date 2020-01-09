@@ -43,14 +43,30 @@ const MyName = (props) =>{
     )
   })
 
+
+  let buttons = [
+    {button:"hello"},
+    {button: "button"}
+  ]
+
+  let buttontile = buttons.map(button=>{
+    return(
+      <ButtonComponent
+      button = {button.button}
+      />
+    )
+  })
+
   return(
     <div>
     <h1>Hi Im Leslie</h1>
+
     <ButtonComponent
     button = "hello!"
     />
     {information}
     {imagepic}
+
 
     </div>
   )
