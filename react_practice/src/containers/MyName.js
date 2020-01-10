@@ -1,10 +1,14 @@
-import React from "react"
+import React, {useState} from "react"
 import Tile1 from '../components/Tile1.js'
 import ImageComponent from '../components/ImageComponent.js'
 import ButtonComponent from '../components/ButtonComponent.js'
 
 
+
 const MyName = (props) =>{
+  const [visibility, setVisibility] = useState("visible")
+
+
   let data = [
     {name: "leslie",
     text: "hello my name is leslie!!!"},
@@ -18,11 +22,10 @@ const MyName = (props) =>{
       <Tile1
       name = {tile1.name}
       text = {tile1.text}
+      visibility = {visibility}
       />
     )
   })
-
-
 
 
   let image = [
@@ -43,19 +46,27 @@ const MyName = (props) =>{
     )
   })
 
+const btnClick = (event)=>{
+  event.preventDefault()
+  if(visibility === "visible"){
+    setVisibility("hidden")
+  }else if(visibility  === "hidden"){
+    setVisibility("visible")
+  }
+}
+
   return(
     <div>
     <h1>Hi Im Leslie</h1>
     <ButtonComponent
     button = "hello!"
     />
+
+    <button  onClick={btnClick}>testing</button>
     {information}
     {imagepic}
-
     </div>
   )
-
-
 
 }
 
