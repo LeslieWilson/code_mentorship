@@ -2,10 +2,9 @@ import React from 'react'
 
 const ImageComponent = props =>{
   return(
-    <div className = "img">
+    <div className = {props.linepresence}>
       <p>{props.label}</p>
-  <img src={props.image} />
-
+   <img src={props.image} />
     </div>
   )
 }
