@@ -7,12 +7,12 @@ import ButtonComponent from '../components/ButtonComponent.js'
 
 const MyName = (props) =>{
   const [visibility, setVisibility] = useState("visible")
+  const [linepresence, setLinePresence] = useState("notPresent")
 
 
   let data = [
     {name: "leslie",
     text: "hello my name is leslie!!!"},
-
     {name:  "steve",
    text:" fkjfkjhfkfkfk"}
   ]
@@ -42,6 +42,7 @@ const MyName = (props) =>{
       <ImageComponent
       image = {pic.image}
       label = {pic.label}
+      linepresence = {linepresence}
       />
     )
   })
@@ -52,6 +53,16 @@ const btnClick = (event)=>{
     setVisibility("hidden")
   }else if(visibility  === "hidden"){
     setVisibility("visible")
+  }
+
+}
+
+const btnClickTwo = (event)=>{
+  event.preventDefault()
+  if(linepresence === "present"){
+    setLinePresence('notPresent')
+  }else if(linepresence === "notPresent"){
+    setLinePresence('present')
   }
 }
 
@@ -64,10 +75,13 @@ const btnClick = (event)=>{
     />
 
     <button  onClick={btnClick}>testing</button>
+    <button onClick={btnClickTwo}>buttontwo!</button>
     {information}
     {imagepic}
     </div>
   )
+
+
 
 }
 

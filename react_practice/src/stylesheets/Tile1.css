@@ -13,3 +13,7 @@
 .hidden{
 visibility:hidden
 }
+
+.present{
+  border:5px solid black;
+}

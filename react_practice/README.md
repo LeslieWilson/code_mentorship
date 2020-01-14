@@ -25,3 +25,6 @@ send the classname saved in your hook to your tile component via props by puttin
 create a button that your render in your container - not via the buttoncomponent
 create a function that toggles the value from “visible” to “hidden”
 bind that function to the button you just made’s onclick -->
+
+<!-- DIRECTIONS JAN 10
+make a button in the container that makes a 5px solid black border appear and disappear on your images -->
