@@ -2,7 +2,7 @@ import React from 'react'
 
 const Os = props => {
   return(
-    <div className = 'o'>
+    <div className = {props.visibility}>
     <p>{props.information}</p>
     </div>
   )
